@@ -19,7 +19,7 @@ taskForm.addEventListener('submit', function(event) {
   taskInput.value = '';
 
   if (localStorage.length >= 30) {
-    showPopup('عفواً، لا يمكن إضافة المزيد من المهام');
+    showPopup('عفواً، لا يمكنك إضافة اكثر من 30 مهمة');
     return;
   }
 
@@ -118,4 +118,126 @@ function createTaskElement(taskObject, key) {
   taskElement.appendChild(deleteButton);
   return taskElement;
 }
+
+const squares = document.querySelectorAll('.square');
+const message = document.querySelector('.message');
+const score = document.querySelector('.score');
+const resetButton = document.querySelector('.reset');
+const startButton = document.querySelector('.start');
+
+let board = [];
+let gameStarted = false;
+let currentPlayer = '';
+let userScore = 0;
+let computerScore = 0;
+
+function startGame() {
+    board = Array.from({ length: 9 }, () => '');
+    gameStarted = true;
+    currentPlayer = 'user';
+    message.textContent = 'Your turn';
+    score.textContent = `User: ${userScore} | Computer: ${computerScore}`;
+    squares.forEach(square => {
+        square.textContent = '';
+        square.style.color = '#333';
+        square.addEventListener('click', handleSquareClick, { once: true });
+    });
+}
+
+function resetGame() {
+    gameStarted = false;
+    currentPlayer = '';
+    setTimeout(() => {
+        message.textContent = 'Click start to play';
+        score.textContent = `User: ${userScore} | Computer: ${computerScore}`;
+        squares.forEach(square => {
+            square.textContent = '';
+            square.style.color = '#333';
+            square.removeEventListener('click', handleSquareClick);
+        });
+    }, 1000);
+}
+
+function handleSquareClick(event) {
+    const square = event.target;
+    const squareIndex = parseInt(square.id) - 1;
+    if (board[squareIndex] || !gameStarted || currentPlayer !== 'user') {
+        return;
+    }
+    board[squareIndex] = 'X';
+    square.textContent = 'X';
+    square.style.color = '#333';
+    if (checkWin(board, 'X')) {
+        userScore += 2;
+        score.textContent = `User: ${userScore} | Computer: ${computerScore}`;
+        message.textContent = 'You win!';
+        resetGame();
+        return;
+    }
+    if (checkTie(board)) {
+        message.textContent = 'Tie game!';
+        resetGame();
+        return;
+    }
+    currentPlayer = 'computer';
+    message.textContent = 'Computer is thinking...';
+    setTimeout(() => {
+        const computerIndex = getComputerMove(board);
+        board[computerIndex] = 'O';
+        squares[computerIndex].textContent = 'O';
+        squares[computerIndex].style.color = '#f00';
+        if (checkWin(board, 'O')) {
+            computerScore += 2;
+            score.textContent = `User: ${userScore} | Computer: ${computerScore}`;
+            message.textContent = 'Computer wins!';
+            resetGame();
+            return;
+        }
+        if (checkTie(board)) {
+            message.textContent = 'Tie game!';
+            resetGame();
+            return;
+        }
+        currentPlayer = 'user';
+        message.textContent = 'Your turn';
+    }, 1000);
+}
+
+function checkWin(board, player) {
+    if (
+        (board[0] === player && board[1] === player && board[2] === player) ||
+        (board[3] === player && board[4] === player && board[5] === player) ||
+        (board[6] === player && board[7] === player && board[8] === player) ||
+        (board[0] === player && board[3] === player && board[6] === player) ||
+        (board[1] === player && board[4] === player && board[7] === player) ||
+        (board[2] === player && board[5] === player && board[8] === player) ||
+        (board[0] === player && board[4] === player && board[8] === player) ||
+        (board[2] === player && board[4] === player && board[6] === player)
+    ) {
+        return true;
+    }
+    return false;
+}
+
+function checkTie(board) {
+    if (board.every(square => square !== '')) {
+        return true;
+    }
+    return false;
+}
+
+function getComputerMove(board) {
+    const availableMoves = board.reduce((moves, square, index) => {
+        if (square === '') {
+            moves.push(index);
+        }
+        return moves;
+    }, []);
+    const randomIndex = Math.floor(Math.random() * availableMoves.length);
+    return availableMoves[randomIndex];
+}
+
+resetButton.addEventListener('click', resetGame);
+startButton.addEventListener('click', startGame);
+
 

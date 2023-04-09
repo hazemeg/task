@@ -4,44 +4,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width= 100%, initial-scale=1.0">
-    <title>task 4 you</title>
+    <title>Daily Tasks</title>
+    <link rel="icon" type="image/x-icon" href="assest/pho/task.png">
     <link rel="stylesheet" href="assest/css/bootstrap.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">
-  <!-- Element to contain animated typing -->
-  <span id="element" style="color: #000000; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-weight: 900; font-size: 20px; "></span>
+        <nav id="nav" class="navbar navbar-expand-lg" >
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">
+      <!-- Element to contain animated typing -->
+      <span class="logo" id="element" style="color: #2db6ff; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-weight: 900; font-size: 20px;  "></span>
+    
+      <!-- Load library from the CDN -->
+      <script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
+    
+      <!-- Setup and start animation! -->
+      <script>
+        var typed = new Typed('#element', {
+          strings: ['<i> daily tasks', '<i> Making your day'],
+          typeSpeed: 150,
+          loop: true,
+        });
+      </script>
+    
+              </a>
+              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 
-  <!-- Load library from the CDN -->
-  <script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
-
-  <!-- Setup and start animation! -->
-  <script>
-    var typed = new Typed('#element', {
-      strings: ['<i> daily','tasks'],
-      typeSpeed: 150,
-      loop: true,
-    });
-  </script>
-
-          </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-              <a class="nav-link" href="#">Features</a>
+                <div class="navbar-nav">
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-      </nav>
-
-      <div id="popup-container">
+          </nav>
+        </div>      <div id="popup-container">
         <div id="popup">
           <p id="popup-message"></p>
           <button id="popup-close">إغلاق</button>
@@ -49,9 +45,9 @@
       </div>
       
 
-      <div class="div1" > 
+      <div class="task-input-container" > 
       <form id="task-form">
-        <input type="text" id="task-input" placeholder="اكتب مهمتك هنا">
+        <input class="task-input" type="text" id="task-input" placeholder="اكتب مهمتك هنا">
         <button type="submit">إرسال</button>
       </form>
       </div>
@@ -67,13 +63,133 @@
         <div id="completed-tasks"></div>
       </div>
 
+      <div class="game">
+        <div class="board">
+            <div class="square" id="1"></div>
+            <div class="square" id="2"></div>
+            <div class="square" id="3"></div>
+            <div class="square" id="4"></div>
+            <div class="square" id="5"></div>
+            <div class="square" id="6"></div>
+            <div class="square" id="7"></div>
+            <div class="square" id="8"></div>
+            <div class="square" id="9"></div>
+        </div>
+        <div class="info">
+            <div class="message">Click start to play</div>
+            <div class="score">User: 0 | Computer: 0</div>
+            <button class="reset">Reset</button>
+            <button class="start">Start</button>
+        </div>
+    </div>
 
       <div id="footer">
-        <div id="copy-right">
+
+
+        <!-- Button trigger modal -->
+<button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#staticBackdrop1">
+من نحن؟؟
+</button>
+  
+  <!-- Modal -->
+  <div  class="   modal fade" id="staticBackdrop1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="bg-dark modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel" style="color: aliceblue;">من نحن؟؟</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+
+<strong style="color: aliceblue;">Hazem: المصمم و المطور
+<br>
+Abdullah: المفكر و المشارك 
+
+</strong>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">exit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+مهمة الموقع و الإستخدام
+        </button>
+          
+          <!-- Modal -->
+          <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable">
+              <div class="bg-dark modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="staticBackdropLabel"style="color: aliceblue;">مهمة الموقع و الإستخدام
+                </h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" style="color: aliceblue;">
+يمكنك ان تحفظ مهامك لمدة 24 ساعة و انجازها 
+<br>
+حيث يمكنك إنجاز مهامك اليومية في اسرع وقت ممكن و تحدي نفسك 
+<br>
+<br>
+يمكنك تعليم مهمتك بإنها منجزة بالضغط علي المربع الصغير لتعليمها ك منجزة 
+<br>
+<br>
+يمكنك تعديل اسم مهمتك عن طريق الضغط علي تعديل و تغير الأسم 
+<br>
+<br>
+يمكنك حذف المهمة عن طريق الضغط علي حذف 
+<br>
+<br>
+يمكنك رؤية الساعة بتوقيت القاهرة في نهاية الصفحة 
+<br>
+<br>
+يمكنك لعب لعبة X O !!
+<br>
+<br>
+<b>**قريبا** </b>
+<br>
+<br>
+لعبة X O
+<br>
+<br>
+الترجمة للإنجليزية
+<br>
+<br>
+الوضع الداكن
+<br><br>
+<strong>و الكثير قريبا </strong>
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">exit</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          
+
+
+      
+
+      
+      <footer>
+        <div class="footer-section">        <div id="copy-right">
        <strong>    <p>&copy; 2023  Daily Tasks</p></strong>
+
+       
         </div>
 
-<nav>
+        </div>
+        <div class="footer-section">
+
+           <nav>
     <span id="clock">
 
 <script>
@@ -95,16 +211,20 @@ setInterval(updateTime, 1000);
     </span>
 
 
+
 </nav>
+         </div>
+
         <div id="social-media">
-          <a href="#"><i class="bi bi-facebook"></i></a>
-          <a href="#"><i class="bi bi-tiktok"></i></a>
-          <a href="#"><i class="bi bi-whatsapp"></i></a>
+          <a id="fac" href="https://instagram.com/hazemtmr?igshid=ZDdkNTZiNTM="><i class="bi bi-instagram"></i></a>
+          <a id="tik" href="https://www.tiktok.com/@hazem_m07amed"><i class="bi bi-tiktok"></i></a>
+          <a id="wha"href="https://wa.me/qr/NWWS5GULDAYFE1"><i class="bi bi-whatsapp"></i></a>
         </div>
+
+
+
+      </footer>
       </div>
-
-      
-
 
     <script src="app.js"></script>
     <script src="assest/js/bootstrap.js"></script>
