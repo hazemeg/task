@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width= 100%, initial-scale=1.0">
+    <title>task 4 you</title>
+    <link rel="stylesheet" href="assest/css/bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+  <!-- Element to contain animated typing -->
+  <span id="element" style="color: #000000; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-weight: 900; font-size: 20px; "></span>
+
+  <!-- Load library from the CDN -->
+  <script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
+
+  <!-- Setup and start animation! -->
+  <script>
+    var typed = new Typed('#element', {
+      strings: ['<i> daily','tasks'],
+      typeSpeed: 150,
+      loop: true,
+    });
+  </script>
+
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link" href="#">Features</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <div id="popup-container">
+        <div id="popup">
+          <p id="popup-message"></p>
+          <button id="popup-close">إغلاق</button>
+        </div>
+      </div>
+      
+
+      <div class="div1" > 
+      <form id="task-form">
+        <input type="text" id="task-input" placeholder="اكتب مهمتك هنا">
+        <button type="submit">إرسال</button>
+      </form>
+      </div>
+
+
+      <div id="task-container">
+        <h2  class="h22">المهام الغير منتهية</h2>
+        <div id="incomplete-tasks">
+
+        </div>
+      
+        <h2 class="h23" >المهام المنتهية</h2>
+        <div id="completed-tasks"></div>
+      </div>
+
+
+      <div id="footer">
+        <div id="copy-right">
+       <strong>    <p>&copy; 2023  Daily Tasks</p></strong>
+        </div>
+
+<nav>
+    <span id="clock">
+
+<script>
+
+function updateTime() {
+  const now = new Date();
+  const timezoneOffset = 0 * 60; // توقيت مصر = توقيت غرينتش + 2 ساعات
+  const localTime = new Date(now.getTime() + timezoneOffset * 60 * 1000);
+  const hours = localTime.getHours().toString().padStart(2, '0');
+  const minutes = localTime.getMinutes().toString().padStart(2, '0');
+  const seconds = localTime.getSeconds().toString().padStart(2, '0');
+  const timeString = `${hours}:${minutes}:${seconds}`;
+  document.getElementById('clock').textContent = timeString;
+}
+
+setInterval(updateTime, 1000);
+</script>
+
+    </span>
+
+
+</nav>
+        <div id="social-media">
+          <a href="#"><i class="bi bi-facebook"></i></a>
+          <a href="#"><i class="bi bi-tiktok"></i></a>
+          <a href="#"><i class="bi bi-whatsapp"></i></a>
+        </div>
+      </div>
+
+      
+
+
+    <script src="app.js"></script>
+    <script src="assest/js/bootstrap.js"></script>
+    <script src="assest/js/jquery-3.6.4.min.js"></script>
+    <script src="assest/js/typed.js"></script>
+    
+</body>
+</html>
