@@ -1,0 +1,454 @@
+
+body{
+background-color: #414141;
+height: 100vh;
+
+}
+.navbar-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.div1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+  }
+  
+  button[type="submit"] {
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .task {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .task input[type="checkbox"] {
+    margin-right: 10px;
+  }
+  
+  .task button {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+
+  .task-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .task {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    width: 400px;
+  }
+  
+  .task input[type="checkbox"] {
+    margin-right: 10px;
+  }
+  
+  .task button {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .task-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .task {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    width: 400px;
+  }
+  
+  .task input[type="checkbox"] {
+    margin-right: 10px;
+  }
+  
+  .task button {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #completed-tasks {
+    margin-top: 20px;
+  }
+  .task-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .task {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    width: 400px;
+  }
+  
+  .task input[type="checkbox"] {
+    margin-right: 10px;
+  }
+  
+  .task button {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #completed-tasks {
+    margin-top: 40px;
+    background-color: #000;
+    color: #000000;
+    font-weight: 900;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+    border-radius: 15px;
+  }
+  
+  #incomplete-tasks {
+    margin-bottom: 50px;
+    background-color: #bbbbbbdb;
+    color: #000000;
+    font-weight: 900;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+    border-radius: 20px;
+  }
+  
+  #incomplete-tasks h2,
+  #completed-tasks h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  #incomplete-tasks .task,
+  #completed-tasks .task {
+    width: 100%;
+  }
+
+  #popup-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 20px;
+    background-color: rgba(166, 151, 151, 0.519);
+    display: none;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #popup {
+    background-color: #e77c0a;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    color: #000;
+    font-weight: 850;
+    font-size: 20px;
+  }
+  
+  #popup-close {
+    background-color: #dc293b;
+    color: #000000;
+    border: none;
+    font-weight: 800;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+
+
+  #footer {
+    margin-top: 80px;
+    background-color: #f8f9fa;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  #copy-right {
+    font-size: 14px;
+  }
+  
+  #social-media {
+    font-size: 24px;
+  }
+  
+  #social-media a {
+    color: #3b5998;
+    margin-left: 10px;
+  }
+  
+  #social-media a:hover {
+    color: #000000;
+  }
+
+
+  .h22{
+    color: #000;
+    border: 5px solid #c51e2feb;
+    border-radius: 5px;
+    background-color: #626161;
+      }  .h23{
+        color: #000;
+        border: 5px solid #00ff11;
+        border-radius: 5px;
+        background-color: #626161;
+          }
+
+
+
+          #clock {
+            color: #ff0000;
+            font-size: 20px;
+            font-weight: bold;
+            margin-right: 10px;
+            transform: translateX(100%);
+          }
+
+          html {
+            scroll-behavior: smooth;
+          }
+
+          .message {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #be645d;
+            color: #000000;
+            font-size: 20px;
+            font-weight:850 ;
+            padding: 16px;
+            text-align: center;
+            transition: opacity 0.5s ease, transform 0.5s ease;
+          }
+          
+          .message.hide {
+            opacity: 0;
+            transform: translateY(100%);
+          }
+          
+          .countdown {
+            font-size: 24px;
+            margin-top: 8px;
+          }
+
+
+******************************
+
+
+const taskForm = document.getElementById('task-form');
+const taskInput = document.getElementById('task-input');
+const incompleteTasks = document.getElementById('incomplete-tasks');
+const completedTasks = document.getElementById('completed-tasks');
+const popupContainer = document.getElementById('popup-container');
+const popupMessage = document.getElementById('popup-message');
+const popupClose = document.getElementById('popup-close');
+
+taskForm.addEventListener('submit', function(event) {
+  event.preventDefault();
+
+  const task = taskInput.value.trim();
+
+  if (task === '') {
+    showPopup('عفواً، المهمة فارغة');
+    return;
+  }
+
+  taskInput.value = '';
+
+  if (localStorage.length >= 30) {
+    showPopup('عفواً، لا يمكن إضافة المزيد من المهام');
+    return;
+  }
+
+  const taskObject = {
+    task: task,
+    timestamp: Date.now(),
+    completed: false
+  };
+  const key = 'task-' + Date.now();
+  localStorage.setItem(key, JSON.stringify(taskObject));
+
+  // إضافة المهمة إلى القائمة
+  const taskElement = createTaskElement(taskObject, key);
+  incompleteTasks.appendChild(taskElement);
+});
+
+function showPopup(message) {
+  popupMessage.textContent = message;
+  popupContainer.style.display = 'flex';
+}
+
+popupClose.addEventListener('click', function() {
+  popupContainer.style.display = 'none';
+});
+
+// استرداد المهام المخزنة في localStorage
+for (let i = 0; i < localStorage.length; i++) {
+  const key = localStorage.key(i);
+  if (key.startsWith('task-')) {
+    const taskObject = JSON.parse(localStorage.getItem(key));
+    const taskElement = createTaskElement(taskObject, key);
+    if (taskObject.completed) {
+      completedTasks.appendChild(taskElement);
+    } else {
+      incompleteTasks.appendChild(taskElement);
+    }
+  }
+}
+
+// حذف المهام المنتهية تلقائياً بعد 24 ساعة
+setInterval(function() {
+  for (let i = 0; i < localStorage.length; i++) {
+    const key = localStorage.key(i);
+    if (key.startsWith('task-')) {
+      const taskObject = JSON.parse(localStorage.getItem(key));
+      if (!taskObject.completed && Date.now() - taskObject.timestamp >= 24 * 60 * 60 * 1000) {
+        const taskElement = document.getElementById(key);
+        if (taskElement) {
+          taskElement.parentNode.removeChild(taskElement);
+        }
+        localStorage.removeItem(key);
+      }
+    }
+  }
+}, 60 * 1000); // يتم التحقق كل دقيقة من المهام المخزنة لحذف المهام التي انتهت صلاحيتها. يمكن تعديل هذه القيمة حسب الحاجة.
+
+function createTaskElement(taskObject, key) {
+  const taskElement = document.createElement('div');
+  taskElement.classList.add('task');
+  taskElement.id = key;
+  const checkbox = document.createElement('input');
+  checkbox.type = 'checkbox';
+  checkbox.checked = taskObject.completed;
+  checkbox.addEventListener('click', function() {
+    taskObject.completed = checkbox.checked;
+    localStorage.setItem(key, JSON.stringify(taskObject));
+    if (checkbox.checked) {
+      taskElement.classList.add('completed');
+      completedTasks.appendChild(taskElement);
+    } else {
+      taskElement.classList.remove('completed');
+      incompleteTasks.appendChild(taskElement);
+    }
+  });
+  const taskText = document.createElement('span');
+  taskText.textContent = taskObject.task;
+  const deleteButton = document.createElement('button');
+  deleteButton.textContent = 'حذف';
+  deleteButton.addEventListener('click', function() {
+    taskElement.parentNode.removeChild(taskElement);
+    localStorage.removeItem(key);
+  });
+  taskElement.appendChild(checkbox);
+  taskElement.appendChild(taskText);
+  taskElement.appendChild(deleteButton);
+  return taskElement;
+  
+}
+
+
+
+function updateTime() {
+    const now = new Date();
+    const timezoneOffset = 0 * 60; // توقيت مصر = توقيت غرينتش + 2 ساعات
+    const localTime = new Date(now.getTime() + timezoneOffset * 60 * 1000);
+    const hours = localTime.getHours().toString().padStart(2, '0');
+    const minutes = localTime.getMinutes().toString().padStart(2, '0');
+    const seconds = localTime.getSeconds().toString().padStart(2, '0');
+    const timeString = `${hours}:${minutes}:${seconds}`;
+    document.getElementById('clock').textContent = timeString;
+  }
+  
+  setInterval(updateTime, 1000);
+  
+
+
+
+
+***************************************************
+
+
+    <span id="clock">
+
+<script>
+
+function updateTime() {
+  const now = new Date();
+  const timezoneOffset = 0 * 60; // توقيت مصر = توقيت غرينتش + 2 ساعات
+  const localTime = new Date(now.getTime() + timezoneOffset * 60 * 1000);
+  const hours = localTime.getHours().toString().padStart(2, '0');
+  const minutes = localTime.getMinutes().toString().padStart(2, '0');
+  const seconds = localTime.getSeconds().toString().padStart(2, '0');
+  const timeString = `${hours}:${minutes}:${seconds}`;
+  document.getElementById('clock').textContent = timeString;
+}
+
+setInterval(updateTime, 1000);
+</script>
+
+    </span>
